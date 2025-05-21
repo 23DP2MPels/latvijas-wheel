@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATVIAN WHEELS - Auto sporta festivāls Bikernieku trasē</title>
+    <style>
+		@font-face {
+		  font-family: StormGust;
+		  src: url(StormGust.otf);
+		}	
+		
+		h1, h2, h3 {
+			font-family: StormGust;
+		}
+		
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        
+        .header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('img/background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #ffaa00;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .header h2 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            color: #ffaa00;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .header p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        
+        .date {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffaa00;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .section h2 {
+            color: #ffaa00;
+            border-bottom: 2px solid #ffaa00;
+            padding-bottom: 10px;
+            font-size: 2rem;
+        }
+        
+        .activities {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .day {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+        
+        .day h3 {
+            color: #ffaa00;
+            margin-top: 0;
+        }
+        
+        .schedule-item {
+            margin: 15px 0;
+            display: flex;
+        }
+        
+        .time {
+            font-weight: bold;
+            width: 80px;
+            color: #ffaa00;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .category {
+            text-align: center;
+            margin: 10px;
+            min-width: 200px;
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ffaa00;
+        }
+        
+        .sponsors {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .sponsor-logo {
+            height: 80px;
+            width: 200px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            padding: 10px;
+            overflow: hidden;
+        }
+        
+        .sponsor-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ffaa00;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #ff8800;
+        }
+        
+        .footer {
+            background-color: #0a0a0a;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer a {
+            color: #ffaa00;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .location-map {
+            width: 100%;
+            height: 400px;
+            background-color: #333;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .location-map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 3rem;
+            }
+            
+            .header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .date {
+                font-size: 1.5rem;
+            }
+            
+            .day {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>LATVIAN WHEELS</h1>
+        <h2>SPORTA FESTIVALS</h2>
+        <p class="date">25.-26. JŪLIJS 2025</p>
+        <p>BIKERNIEKU TRASE, RĪGA</p>
+    </div>
+    
+    <div class="container">
+        <div class="section">
+            <h2>PAR FESTIVAlU</h2>
+            <p>Latvian Wheels ir gada lielākais auto sporta pasākums Latvijā, kas pulcē labākos drifta pilotus, auto entuziastus un skatītājus no visas Baltijas. Festivāls norisinās leģendārajā Bikernieku trasē Rīgā un izstāžu hallē, piedāvājot iespaidīgu auto izstādi un aizraujošas sacensības.</p>
+            <p>Latvian Wheels mērķis ir popularizēt auto kultūru un legālu autosportu, veicinot interesi par autosportu, inženieriju un tehnoloģijām, kā arī stiprinot auto entuziastu kopienu.</p>
+            
+            <div class="categories">
+                <div class="category">
+                    <div class="category-icon">🏎️</div>
+                    <h3>AUTO IZSTADE</h3>
+                    <p>Ekskluzīvi spēkrati un īpašas pārbūves</p>
+                </div>
+                <div class="category">
+                    <div class="category-icon">🏆</div>
+                    <h3>lOTERIJAS</h3>
+                    <p>Vērtīgas balvas un pārsteigumi</p>
+                </div>
+                <div class="category">
+                    <div class="category-icon">👨‍🏭</div>
+                    <h3>BRAUCIENI</h3>
+                    <p>Profesionāļu demonstrācijas</p>
+                </div>
+                <div class="category">
+                    <div class="category-icon">💨</div>
+                    <h3>DRIFT</h3>
+                    <p>Elpu aizraujoši sānslīdes šovi</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>PROGRAMMA</h2>
+            <div class="activities">
+                <div class="day">
+                    <h3>PIEKTDIENA (First day)</h3>
+                    <p><strong>Bikernieku trase</strong></p>
+                    
+                    <div class="schedule-item">
+                        <div class="time">10:00</div>
+                        <div class="activity">Vārti vaļā</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">09:30</div>
+                        <div class="activity">Treniņbraucieni (līdz 15:30)</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">16:30</div>
+                        <div class="activity">Kvalifikācija</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">19:45</div>
+                        <div class="activity">Vakara showdown</div>
+                    </div>
+                </div>
+                
+                <div class="day">
+                    <h3>SESTDIENA (Second day)</h3>
+                    <p><strong>Bikernieku trase</strong></p>
+                    
+                    <div class="schedule-item">
+                        <div class="time">10:30</div>
+                        <div class="activity">Skatītāji ienāk</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">11:30</div>
+                        <div class="activity">TOP32 iesildīšanās</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">14:00</div>
+                        <div class="activity">TOP32 cīņas</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">17:00</div>
+                        <div class="activity">Braucēju parāde</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">17:30</div>
+                        <div class="activity">TOP16, TOP8 un Fināls (līdz 18:30)</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">19:45</div>
+                        <div class="activity">Apbalvošana</div>
+                    </div>
+                </div>
+                
+                <div class="day">
+                    <h3>days</h3>
+                    <p><strong>Izstāžu halle</strong></p>
+                    
+                    <div class="schedule-item">
+                        <div class="time">10:00</div>
+                        <div class="activity">Auto izstāde (līdz 20:00)</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">12:00</div>
+                        <div class="activity">DJ / mūzika</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">14:00</div>
+                        <div class="activity">Konkursi skatītājiem</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">16:00</div>
+                        <div class="activity">Tikšanās ar pilotiem</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">18:00</div>
+                        <div class="activity">Loterijas un balvas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>FOTOGAlERIJA</h2>
+            <p>Ieskats iepriekšējā gada pasākumos</p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="img/time1.jpg" alt="Foto 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/time2.jpg" alt="Foto 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/time3.jpg" alt="Foto 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/time4.jpg" alt="Foto 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/time5.jpg" alt="Foto 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/time6.jpg" alt="Foto 6">
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>NORISES VIETA</h2>
+            <p><strong>Bikernieku trase</strong> ir leģendāra autosporta vieta Rīgā, kas pielāgota auto kultūras svētkiem ar skatītāju zonām, profesionālu apgaismojumu un tehnisko aprīkojumu.</p>
+            <p>Apmeklētājiem būs pieejami ēdināšanas pakalpojumi, atpūtas zonas un tirdzniecības stendi.</p>
+            <div class="location-map">
+                <img src="img/map.png" alt="Map">
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>BIlETES</h2>
+            <p>Iegādājies biļetes savlaicīgi un saņem 15% atlaidi!</p>
+            
+            <div class="categories">
+                <div class="category">
+                    <h3>DIENAS BIlETE</h3>
+                    <p>25 EUR</p>
+                    <p>Piekļuve vienai dienai pēc izvēles</p>
+                </div>
+                <div class="category">
+                    <h3>FESTIVALA BIlETE</h3>
+                    <p>40 EUR</p>
+                    <p>Piekļuve abām festivāla dienām</p>
+                </div>
+                <div class="category">
+                    <h3>VIP BIlETE</h3>
+                    <p>80 EUR</p>
+                    <p>Piekļuve VIP zonai, ēdināšana, tikšanās ar pilotiem</p>
+                </div>
+            </div>
+            
+            <div class="cta">
+                <a href="#" class="button">IEGĀDĀTIES BIĻETES</a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>SPONSORI UN ATBALSTĪTĀJI</h2>
+            <div class="sponsors">
+                <div class="sponsor-logo"><img src="img/4f.png" alt="4F"></div>
+                <div class="sponsor-logo"><img src="img/redbull.png" alt="Red Bull"></div>
+                <div class="sponsor-logo"><img src="img/FES.png" alt="EU"></div>
+                <div class="sponsor-logo"><img src="img/2027.png" alt="2027"></div>
+                <div class="sponsor-logo"><img src="img/dji.png" alt="DJI"></div>
+            </div>
+        </div>
+        
+        <div class="cta">
+            <h2>PIEVIENOJIES MUMS BIKERNIEKU TRASE!</h2>
+            <p>Piedalies lielākajā auto sporta festivālā Latvijā un piedzīvo neaizmirstamas emocijas!</p>
+            <a href="#" class="button">REĢISTRĒTIES JAUNUMIEM</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 LATVIAN WHEELS | Visas tiesības aizsargātas</p>
+        <p>Kontakti: <a href="mailto:info@latvianwheels.lv">info@latvianwheels.lv</a> | Tālr.: +371 2X XXX XXX</p>
+        <p>Sekojiet mums: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a></p>
+        <p>Oficiālā mājaslapa: <a href="http://www.latvianwheels.lv">www.latvianwheels.lv</a></p>
+    </div>
+</body>
+</html>
